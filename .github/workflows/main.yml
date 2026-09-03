@@ -1,8 +1,12 @@
 name: Automated Commit
 
 on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/main.yml"
   schedule:
-    - cron: '0 */12 * * *'  
+    - cron: '0 */12 * * *'
   workflow_dispatch:
 
 jobs:
